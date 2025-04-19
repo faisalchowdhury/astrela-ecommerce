@@ -4,14 +4,17 @@ import { RiMenu5Fill } from "react-icons/ri";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import { IoSearchOutline } from "react-icons/io5";
 import { PiShoppingCartSimpleLight } from "react-icons/pi";
+import { NavLink } from "react-router";
 const Header = () => {
   const [toggle, setToggle] = useState(false);
 
   const menu = (
     <>
-      <li className="hover:text-purple-800 font-medium">
-        <a href="">Home</a>
-      </li>
+      <NavLink to={"/"}>
+        <li className="hover:text-purple-800 font-medium">
+          <a href="">Home</a>
+        </li>
+      </NavLink>
       <li className="hover:text-purple-800 font-medium">
         <a href="">About</a>
       </li>

@@ -1,6 +1,5 @@
 import React from "react";
 import { BsFillStarFill, BsMinecart } from "react-icons/bs";
-import { FaHeart } from "react-icons/fa";
 import { IoEye } from "react-icons/io5";
 import { NavLink } from "react-router";
 
@@ -13,7 +12,6 @@ const Product = ({ product }) => {
       </div>
       <h3>{title}</h3>
       <p className="flex gap-2 items-center">
-        {" "}
         Rating
         <BsFillStarFill color="orange" />({rating?.rate})
       </p>
