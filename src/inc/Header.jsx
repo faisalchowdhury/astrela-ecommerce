@@ -11,16 +11,14 @@ const Header = () => {
   const menu = (
     <>
       <NavLink to={"/"}>
-        <li className="hover:text-purple-800 font-medium">
-          <a href="">Home</a>
-        </li>
+        <li className="hover:text-purple-800 font-medium">Home</li>
       </NavLink>
-      <li className="hover:text-purple-800 font-medium">
-        <a href="">About</a>
-      </li>
-      <li className="hover:text-purple-800 font-medium">
-        <a href="">Products</a>
-      </li>
+      <NavLink to={"/about"}>
+        <li className="hover:text-purple-800 font-medium">About</li>
+      </NavLink>
+      <NavLink to={"/products"}>
+        <li className="hover:text-purple-800 font-medium">Products</li>
+      </NavLink>
       <li className="hover:text-purple-800 font-medium">
         <a href="">Contact</a>
       </li>
