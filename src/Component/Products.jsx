@@ -1,16 +1,19 @@
-import React from "react";
+import React, { use } from "react";
 import Product from "./Product";
 
 const Products = ({data}) => {
   
+  const productByCat = use(data);
+
+  console.log(productByCat)
   return (
     <>
       <div className="py-20">
-        <h3 className="text-2xl pb-5">Products</h3>
+        
 
         <div className="grid grid-cols-4 gap-10">
         {
-          data.map(product => <Product key={product.id} product={product}></Product> )
+          productByCat.map(product => <Product key={product.id} product={product}></Product> )
         }
         </div>
       </div>

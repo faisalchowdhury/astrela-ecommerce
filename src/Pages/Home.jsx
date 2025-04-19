@@ -6,12 +6,12 @@ import ProductCatView from "../Component/ProductCatView";
 
 const Home = () => {
   const categories = useLoaderData();
-  console.log(categories)
+ 
   return (
     <>
       <Hero></Hero>
       <ProductCatView categories={categories} ></ProductCatView>
-      {/* <Products data={data}></Products> */}
+     
     </>
   );
 };

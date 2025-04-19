@@ -11,7 +11,12 @@ const router = createBrowserRouter([
         index: true,
         Component: Home,
         loader: () => fetch("https://fakestoreapi.com/products/categories"),
-        hydrateFallbackElement:<span className="loading loading-infinity loading-xl"></span>
+        hydrateFallbackElement: (
+        <div className="flex justify-center items-center h-[100vh]">
+          <span className="loading loading-infinity loading-xl"></span>
+        </div>
+      )
+
       
       },
     ],
