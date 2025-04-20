@@ -1,10 +1,12 @@
 import React from "react";
 import { BsFillStarFill, BsMinecart } from "react-icons/bs";
 import { useLoaderData } from "react-router";
+import { addToCart } from "../JS/localStorage";
 
 const SingleProduct = () => {
-  const { title, image, price, description, category, rating } =
+  const { id, title, image, price, description, category, rating } =
     useLoaderData();
+
   return (
     <>
       <div className="shadow-2xl rounded-lg mt-10">
@@ -29,7 +31,9 @@ const SingleProduct = () => {
               <BsFillStarFill color="orange" />({rating?.rate})
             </p>
 
-            <button className="flex items-center gap-2 btn bg-purple-900 text-white px-5 py-5 border-none shadow-2xl shadow-purple-800 rounded-md">
+            <button
+              onClick={() => addToCart(id)}
+              className="flex items-center gap-2 btn bg-purple-900 text-white px-5 py-5 border-none shadow-2xl shadow-purple-800 rounded-md">
               <BsMinecart /> <span>Add To Cart</span>
             </button>
           </div>
