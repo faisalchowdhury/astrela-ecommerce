@@ -10,6 +10,7 @@ const Home = () => {
   return (
     <>
       <Hero></Hero>
+      
       <ProductCatView categories={categories} ></ProductCatView>
      
     </>

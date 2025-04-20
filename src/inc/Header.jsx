@@ -20,7 +20,7 @@ const Header = () => {
         <li className="hover:text-purple-800 font-medium">Products</li>
       </NavLink>
       <NavLink to={"/cart"}>
-        <li className="hover:text-purple-800 font-medium">Products</li>
+        <li className="hover:text-purple-800 font-medium">Cart</li>
       </NavLink>
       <li className="hover:text-purple-800 font-medium">
         <a href="">Contact</a>

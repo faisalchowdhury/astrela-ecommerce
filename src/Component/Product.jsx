@@ -2,6 +2,7 @@ import React from "react";
 import { BsFillStarFill, BsMinecart } from "react-icons/bs";
 import { IoEye } from "react-icons/io5";
 import { NavLink } from "react-router";
+import { addToCart } from "../JS/localStorage";
 
 const Product = ({ product }) => {
   const { id, title, image, rating } = product;
@@ -17,7 +18,7 @@ const Product = ({ product }) => {
       </p>
 
       <div className="flex gap-2">
-        <button className="flex items-center gap-2 btn">
+        <button  onClick={() => addToCart(id)} className="flex items-center gap-2 btn">
           <BsMinecart /> <span>Add To Cart</span>
         </button>
         <NavLink to={`/single-product/${id}`} className="btn">

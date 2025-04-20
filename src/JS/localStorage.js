@@ -1,3 +1,5 @@
+import toast from "react-hot-toast";
+
 export const getStoredCart = () => {
   const getCart = localStorage.getItem("cart");
   if (getCart) {
@@ -10,12 +12,29 @@ export const getStoredCart = () => {
 
 export const addToCart = (id) => {
   const stored = getStoredCart();
-  console.log(id);
+
   if (stored.includes(id)) {
-    alert("Data Exist");
+    toast.error('This is Already added')
   } else {
     stored.push(id);
     const convert = JSON.stringify(stored);
     localStorage.setItem("cart", convert);
+    toast.success('This product is added to your cart')
   }
 };
+
+
+export const deleteFromCart = (delId) => {
+  const getCart = getStoredCart();
+
+  if(getCart){
+    
+    const newCart = getCart.filter(id => id != delId );
+    
+
+    const convert = JSON.stringify(newCart);
+    localStorage.setItem("cart", convert);
+    toast.success('Deleted Successfully')
+
+  }
+}
