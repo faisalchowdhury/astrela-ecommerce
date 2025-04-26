@@ -1,9 +1,12 @@
 import AboutImg from "../assets/about.jpg";
 import React from "react";
-
+import { Helmet } from "react-helmet-async";
 const About = () => {
   return (
     <>
+    <Helmet>
+      <title>About</title>
+    </Helmet>
       <div className="hero bg-base-200 min-h-screen py-10">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <img src={AboutImg} className="max-w-sm rounded-lg shadow-2xl" />

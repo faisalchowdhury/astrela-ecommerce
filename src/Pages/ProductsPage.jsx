@@ -17,6 +17,7 @@ const ProductsPage = () => {
   }, [show]);
   return (
     <>
+    
       <div className="grid grid-cols-4 gap-10 py-20">
         {products.map((singleProduct) => (
           <Product key={singleProduct.id} product={singleProduct}></Product>

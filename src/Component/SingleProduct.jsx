@@ -2,6 +2,8 @@ import React from "react";
 import { BsFillStarFill, BsMinecart } from "react-icons/bs";
 import { useLoaderData } from "react-router";
 import { addToCart } from "../JS/localStorage";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router";
 
 const SingleProduct = () => {
   const { id, title, image, price, description, category, rating } =
@@ -9,6 +11,10 @@ const SingleProduct = () => {
 
   return (
     <>
+    <Helmet>
+      <title>{title}</title>
+    
+    </Helmet>
       <div className="shadow-2xl rounded-lg mt-10">
         <div className="flex p-20">
           <div className="flex-1 flex justify-center">

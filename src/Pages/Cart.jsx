@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FiDelete } from "react-icons/fi";
 import { deleteFromCart, getStoredCart } from "../JS/localStorage";
+import { Helmet } from "react-helmet-async";
 
 const Cart = () => {
   const [actualData ,setActualData] =useState([]);
@@ -20,6 +21,9 @@ const Cart = () => {
 
   return (
     <>
+    <Helmet>
+          <title>Cart</title>
+        </Helmet>
      <div>
     
      <div className="w-3/5 mx-auto py-10">
